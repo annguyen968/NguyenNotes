@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "575236778730",
+    "project_id": "nguyennotes-7030f",
+    "storage_bucket": "nguyennotes-7030f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:575236778730:android:dd240fc3cb7e7efee40593",
+        "android_client_info": {
+          "package_name": "com.example.nguyennotes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "575236778730-qkp3ltha10vgl1u15f4ksg8ugh2qs625.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbv2HkV3wlJayEi4r5i9uFr4XU3BTJ_Fc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "575236778730-qkp3ltha10vgl1u15f4ksg8ugh2qs625.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
