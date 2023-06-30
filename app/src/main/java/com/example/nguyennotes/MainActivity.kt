@@ -5,15 +5,18 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material.MaterialTheme
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.nguyennotes.model.Note
-import com.example.nguyennotes.navigation.SetupNavGraph
+import com.example.nguyennotes.domain.model.note.Note
+import com.example.nguyennotes.presentation.navigation.SetupNavGraph
 import com.example.nguyennotes.ui.theme.NguyenNotesTheme
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     companion object {
@@ -33,9 +36,11 @@ class MainActivity : ComponentActivity() {
         username = intent.getStringExtra("USER_NAME") ?: ""
 
         setContent {
-            NguyenNotesTheme() {
-                navController = rememberNavController()
-                SetupNavGraph(navController = navController)
+            MaterialTheme{
+                NguyenNotesTheme {
+                    navController = rememberNavController()
+                    SetupNavGraph(navController = navController)
+                }
             }
         }
     }

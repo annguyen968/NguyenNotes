@@ -1,16 +1,14 @@
-package com.example.nguyennotes.navigation
+package com.example.nguyennotes.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.navigation
-import androidx.navigation.compose.rememberNavController
-import com.example.nguyennotes.ui.screen.HomeScreen
-import com.example.nguyennotes.ui.screen.NotificationScreen
-import com.example.nguyennotes.ui.screen.ProfileScreen
+import com.example.nguyennotes.presentation.chatgpt.ChatGPTScreen
+import com.example.nguyennotes.presentation.home.HomeScreen
+import com.example.nguyennotes.presentation.notification.NotificationScreen
+import com.example.nguyennotes.presentation.profile.ProfileScreen
 
 @Composable
 fun HomeNavGraph(modifier: Modifier = Modifier, navHostController: NavHostController) {
@@ -25,6 +23,9 @@ fun HomeNavGraph(modifier: Modifier = Modifier, navHostController: NavHostContro
 
         composable(route = Screen.Profile.route) {
             ProfileScreen()
+        }
+        composable(route = Screen.ChatGPT.route) {
+            ChatGPTScreen()
         }
     }
 }

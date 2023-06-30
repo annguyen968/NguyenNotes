@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
+    id 'com.google.dagger.hilt.android'
 }
 
 android {
@@ -71,5 +73,33 @@ dependencies {
 
     def nav_version = "2.5.3"
     implementation "androidx.navigation:navigation-compose:$nav_version"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation "androidx.hilt:hilt-navigation-compose:1.1.0-alpha01"
+    implementation 'com.google.dagger:hilt-android:2.46.1'
+
+
+    kapt 'com.google.dagger:hilt-compiler:2.44'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+
+    kapt 'androidx.fragment:fragment-ktx:1.6.0'
+
+    implementation 'androidx.room:room-runtime:2.5.1'
+    kapt 'androidx.room:room-compiler:2.5.1'
+    implementation 'androidx.room:room-ktx:2.5.1'
+
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+
+    implementation 'io.coil-kt:coil-compose:2.4.0'
+
+    implementation platform('com.aallam.openai:openai-client-bom:3.3.0')
+
+    // define dependencies without versions
+    implementation 'com.aallam.openai:openai-client'
+    runtimeOnly 'io.ktor:ktor-client-okhttp'
 
 }

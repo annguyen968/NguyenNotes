@@ -1,4 +1,4 @@
-package com.example.nguyennotes.ui.screen
+package com.example.nguyennotes.presentation.screen
 
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.padding
@@ -20,15 +20,15 @@ import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.example.nguyennotes.navigation.BottomNav
-import com.example.nguyennotes.navigation.HomeNavGraph
+import com.example.nguyennotes.presentation.BottomNav
+import com.example.nguyennotes.presentation.navigation.HomeNavGraph
 
 @Composable
 fun MainScreen(navController: NavHostController = rememberNavController()) {
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
     Scaffold(
-        bottomBar = { BottomBar(navController = navController)},
+        bottomBar = { BottomBar(navController = navController) },
         topBar = {
             TopAppBar(
                 title = { Text(text = currentDestination?.route ?:"") },
@@ -44,7 +44,8 @@ fun BottomBar(navController: NavHostController) {
     val screens = listOf(
         BottomNav.Home,
         BottomNav.Notification,
-        BottomNav.Profile
+        BottomNav.Profile,
+        BottomNav.ChatGPT
     )
 
     val navBackStackEntry by navController.currentBackStackEntryAsState()

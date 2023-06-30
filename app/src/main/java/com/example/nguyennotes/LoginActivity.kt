@@ -1,6 +1,7 @@
 package com.example.nguyennotes
 
 import android.annotation.SuppressLint
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -9,7 +10,10 @@ import androidx.compose.material.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
+import com.example.nguyennotes.ui.theme.NguyenNotesTheme
+import com.example.nguyennotes.ui.theme.Primary
 import kotlinx.coroutines.launch
 
 class LoginActivity : ComponentActivity() {
@@ -18,7 +22,9 @@ class LoginActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-           LoginScreen()
+            NguyenNotesTheme {
+                LoginScreen()
+            }
         }
     }
 
@@ -34,8 +40,12 @@ class LoginActivity : ComponentActivity() {
             scaffoldState = scaffoldState,
             topBar = {
                 TopAppBar(
-                    title = { Text(text = "Login") },
-                    backgroundColor = MaterialTheme.colors.primary
+                    title = {
+                        Text(text = "Login",
+                            style = MaterialTheme.typography.body1,
+                    ) },
+
+                    backgroundColor = Primary
                 )
             },
         ) {

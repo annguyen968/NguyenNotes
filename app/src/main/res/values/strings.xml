@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Nguyen Notes</string>
+    <string name="answer_question">What do you ask?</string>
 </resources>

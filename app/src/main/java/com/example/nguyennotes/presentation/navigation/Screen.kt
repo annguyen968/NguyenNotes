@@ -1,4 +1,4 @@
-package com.example.nguyennotes.navigation
+package com.example.nguyennotes.presentation.navigation
 
 const val ROOT_GRAPH_ROUTE = "root"
 const val AUTH_GRAPH_ROUTE = "auth"
@@ -8,4 +8,6 @@ sealed class Screen(val route: String) {
     object Profile: Screen(route = "Profile")
     object Login: Screen(route = "Login")
     object Notification: Screen(route = "Notificaiton")
+
+    object ChatGPT: Screen(route = "ChatGPT")
 }

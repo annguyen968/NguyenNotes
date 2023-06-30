@@ -1,7 +1,7 @@
 package com.example.nguyennotes.viewmodel
 
 import androidx.lifecycle.ViewModel
-import com.example.nguyennotes.model.Note
+import com.example.nguyennotes.domain.model.note.Note
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.flow.MutableStateFlow
