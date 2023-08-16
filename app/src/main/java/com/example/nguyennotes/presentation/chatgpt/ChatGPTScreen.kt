@@ -28,14 +28,13 @@ fun ChatGPTScreen(
             .fillMaxSize()
             .background(Color(0xffFBE9E7))
     ) {
-
         LazyColumn(
             Modifier
                 .weight(1f)
                 .fillMaxWidth(), reverseLayout = true
         ) {
             items(chatListState.value.chatList.size) {
-                MessageCard(message = chatListState.value.chatList[it].delta)
+                MessageCard(message = chatListState.value.chatList[(chatListState.value.chatList.size -1) - it])
             }
         }
         MessageInput(onSubmit = {

@@ -22,6 +22,10 @@ class ChatGPTRepositoryImpl @Inject constructor(
             model = ModelId("gpt-3.5-turbo"),
             messages = listOf(
                 ChatMessage(
+                    role = ChatRole.System,
+                    content = "You are a helpful assistant!"
+                ),
+                ChatMessage(
                     role = ChatRole.User,
                     content = content
                 )

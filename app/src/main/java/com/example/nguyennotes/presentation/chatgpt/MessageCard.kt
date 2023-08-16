@@ -12,10 +12,11 @@ import androidx.compose.ui.unit.dp
 import com.aallam.openai.api.BetaOpenAI
 import com.aallam.openai.api.chat.ChatChunk
 import com.aallam.openai.api.chat.ChatDelta
+import com.example.nguyennotes.domain.model.Chat
 
 @OptIn(BetaOpenAI::class)
 @Composable
-fun MessageCard (message: ChatDelta?) {
+fun MessageCard (message: Chat?) {
     Column(modifier = Modifier
         .fillMaxWidth()
         .padding(all = 10.dp)) {

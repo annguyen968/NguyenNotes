@@ -66,7 +66,10 @@ fun MessageInput(modifier: Modifier = Modifier, onSubmit: (String) -> Unit) {
             modifier = modifier
                 .fillMaxHeight()
                 .padding(horizontal = 8.dp),
-            onClick = { onSubmit(inputValue) },
+            onClick = {
+                onSubmit(inputValue)
+                inputValue = ""
+                      },
             shape = CircleShape
         ) {
             Icon(Icons.Default.Send, contentDescription = "content description")
