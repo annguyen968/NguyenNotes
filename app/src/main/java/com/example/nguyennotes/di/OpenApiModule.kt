@@ -19,7 +19,7 @@ object OpenApiModule {
     @Singleton
     fun providerOpenAI(): OpenAI {
         val config = OpenAIConfig(
-            token = "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",
+            token = "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",
             timeout = Timeout(socket = 60.seconds),
             // additional configurations...
         )
